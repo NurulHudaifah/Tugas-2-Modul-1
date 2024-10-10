@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@500&display=swap');
+*,
+html {
+    font-family: Poppins;
+}
+.full-page-img {
+    width: 100%;
+    height: 90.5vh;
+    object-fit: cover;
+}
+
+.form-group {
+    margin-bottom: 4vh;
+    display: flex;
+    position: relative;
+}
+.custom-img {
+    width: 100%;
+    max-height: 244px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.label-form {
+    position: absolute;
+    transition: all 300ms ease;
+    margin: 1vh;
+    color: white;
+}
+
+.form-control:focus~.label-form,
+.form-control:not(:placeholder-shown)~.label-form {
+    font-size: 14px;
+    transform: translate3d(0, -26px, 0);
+    opacity: 1;
+    color: white;
+}
+
+.single-box {
+    position: relative;
+    background-color: #efefef;
+    margin: 5vh;
+    max-width: 60vh;
+    max-height: 60vh;
+    box-shadow: 6px 7px 10px gray;
+}
+
+.single-box img {
+    max-width: 20vh;
+    height: 20vh;
+}
+
+.logo-partner img {
+    max-width: 15vh;
+}
+
+.contact-info a {
+    font-style: normal;
+    margin-left: 1vh;
+    color: black;
+}
+
+.main-menu ul {
+    text-align: left;
+    display: inline;
+    background-color: transparent;
+    margin: 0;
+    padding: 15px 4px 17px 0;
+    z-index: 1;
+    list-style: none;
+}
+
+.main-menu ul li {
+    font: bold 14px/18px Poppins;
+    display: inline-block;
+    color: #000;
+    margin-right: -4px;
+    position: relative;
+    padding: 15px 20px;
+    background: transparent;
+    cursor: pointer;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+
+.main-menu a {
+    color: #000;
+}
+
+.main-menu ul li ul {
+    padding: 0;
+    position: absolute;
+    background-color: transparent;
+    top: 48px;
+    left: 0;
+    width: 150px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+.footer{
+    background-color: white;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0%;
+    position: absolute;
+    width: 100%;
+
+}
+.tulisan{
+    margin-right: 100px;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+.gambar{
+    display: flex;
+    gap: 25px;
+    
+}
+.social-icon{
+ width: 25px;
+ height: 25px;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penjumlahan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: black;
+        
+        }
+        .calculator {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px red;
+        }
+        input {
+            width: 100%;
+            padding: 5px;
+            margin: 5px 0;
+        }
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h2>Penjumlahan</h2>
+        <div>
+            <label for="num1">Bilangan pertama</label>
+            <input type="number" id="num1" value="1">
+        </div>
+        <div>
+            <label for="num2">Bilangan kedua</label>
+            <input type="number" id="num2" value="2">
+        </div>
+        <button onclick="jumlahkan()">Jumlahkan</button>
+        <button onclick="reset()">Reset</button>
+        <p id="hasil">Hasil: 3</p>
+    </div>
+
+    <script>
+        function jumlahkan() {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            const hasil = num1 + num2;
+            document.getElementById('hasil').textContent = Hasil: ${hasil};
+        }
+
+        function reset() {
+            document.getElementById('num1').value = '';
+            document.getElementById('num2').value = '';
+            document.getElementById('hasil').textContent = 'Hasil: ';
+        }
+    </script>
+</body>
+</html>

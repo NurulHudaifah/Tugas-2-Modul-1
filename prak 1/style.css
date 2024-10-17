@@ -1,0 +1,136 @@
+/* Styling umum untuk halaman */
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e3e1f9; /* Background sesuai gambar */
+    margin: 0;
+}
+
+/* Calculator styling */
+.calculator {
+    width: 320px; /* Lebar default untuk perangkat besar */
+    background-color: #2b2844;
+    border-radius: 20px;
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    position: relative;
+    transition: width 0.3s ease-in-out;
+}
+
+.display {
+    background-color: #1a1735;
+    padding: 20px;
+    text-align: right;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.display input {
+    width: 100%;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 48px;
+    text-align: right;
+    outline: none;
+    caret-color: transparent;
+}
+
+/* Button grid layout */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+/* General button styles */
+button {
+    background-color: #308c6a;
+    color: white;
+    font-size: 24px;
+    border: none;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #575381;
+}
+
+button:active {
+    background-color: #3c3756;
+}
+
+/* Operator buttons */
+button.operator {
+    background-color: #7b5dde;
+}
+
+button.operator:hover {
+    background-color: #9d7af2;
+}
+
+button.operator:active {
+    background-color: #6848b0;
+}
+
+/* AC button */
+button.ac {
+    background-color: #ff5b67;
+}
+
+button.ac:hover {
+    background-color: #ff767e;
+}
+
+button.ac:active {
+    background-color: #e14a55;
+}
+
+/* Special button for zero */
+button.zero {
+    grid-column: span 2; /* Membuat tombol "0" dua kolom */
+}
+
+/* ----------- Media Queries for Responsive Design ----------- */
+
+/* Tablet: Lebar 600px ke bawah */
+@media (max-width: 600px) {
+    .calculator {
+        width: 280px; /* Lebar di layar tablet atau ponsel besar */
+        padding: 15px;
+    }
+
+    .display input {
+        font-size: 36px; /* Perkecil ukuran font pada layar yang lebih kecil */
+    }
+
+    button {
+        font-size: 20px; /* Sesuaikan ukuran tombol untuk tablet */
+        padding: 15px;
+        
+    }
+}
+
+/* Smartphone: Lebar 400px ke bawah */
+@media (max-width: 400px) {
+    .calculator {
+        width: 100%; /* Gunakan lebar penuh di layar kecil */
+        max-width: 320px; /* Tetapkan lebar maksimal */
+        padding: 10px;
+    }
+
+    .display input {
+        font-size: 30px; /* Ukuran font lebih kecil di ponsel */
+    }
+
+    button {
+        font-size: 18px; /* Sesuaikan ukuran tombol untuk ponsel kecil */
+        padding: 12px;
+    }
+}
